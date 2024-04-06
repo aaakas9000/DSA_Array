@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array_insert</title> 
+    <script>
+        function insertEl() {
+            let data= [10,20,75,85,15,25,79,4,12,66];
+            let newElement= document.getElementById('newElement') .value;
+            let position = document.getElementById('position') .value;
+            console.warn (data)
+
+        for( let i=data.length -1; i>0; i--)
+        {
+            if (i>= position) {
+                data [i+1]= data[i];
+                if(i== position)
+                {
+                    data[i] =newElement;
+
+                }
+            }
+        } 
+        console.warn(data)
+        
+        }
+    </script>
+</head>
+<body>
+<input type="text" placeholder="Enter New Element" id="newElement">
+<input type="text" placeholder=" Enter Position" id="position">
+<BUtton onclick="insertEl()"> Get Element</BUtton>
+
+    
+</body>
+</html>

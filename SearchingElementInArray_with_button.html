@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array searching with button</title>
+    <script>
+        function SearchNum(){
+        let data =[8,56,45,22,6,26,70,32,54,47,55,87];
+
+        let item = document.
+        getElementById("SearchEl").value;
+        let index = undefined;
+        
+        for( i=0; i<data.length-1; i++)
+        {
+            if(data[i] === parseInt(item)) {
+                index=i;
+                break;
+            }
+        }
+        console.warn(index);
+    }
+    </script>
+</head>
+<body>
+    <input type="text" name="searching" id="SearchEl" placeholder="Enter your searching number"/>
+    <button onclick="SearchNum()"> Search</button>
+</body>
+</html>
